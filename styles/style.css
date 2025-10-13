@@ -57,6 +57,9 @@
 
 .card__list {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
 }
 
 .card__list-item {
@@ -105,21 +108,49 @@
   font-size: 18px;
 }
 
-.button__container {
+.card__icon-button {
   grid-column: 2;
   justify-self: flex-end;
+  width: 128px;
+  height: 38px;
+  grid-row: 2;
+  margin-block-end: 22px;
+  margin-inline-end: 6px;
+  border: none;
 }
 
 .button__text {
   border: 2px solid #000;
   font-family: var(--accent-font);
   font-size: 14px;
-  padding-block: 13px;
-  padding-inline: 37px;
+  padding-block: 10px;
+  padding-inline: 34px;
 }
 
 .heart {
   grid-column: 2;
+  grid-row: 2;
   justify-self: center;
   margin-block-end: 10px;
+  margin-inline-start: 10px;
+  margin-block-start: 5px;
+}
+
+.save__button {
+  margin-block-start: 48px;
+  width: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
+  height: clamp(5.25rem, -2.723vw + 5.888rem, 3.438rem);
+  border: 2px solid #000;
+  margin-inline-start: 35px;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-block-end: 100px;
+}
+
+.save__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  margin-block-end: 16px;
 }

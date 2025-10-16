@@ -16,7 +16,7 @@
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--font-weight-text);
   background-image: var(--page-gradient);
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -82,7 +82,6 @@
 
 .container__image {
   background-size: cover;
-  max-block-size: 696px;
   inline-size: 100%;
   position: relative;
   border-inline: 2px solid #000;
@@ -295,11 +294,10 @@
   background-color: var(--primary-color);
   transition: box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
-  overflow: hidden;
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);
@@ -314,9 +312,8 @@
 
 .button span {
   position: relative;
-  color: #000;
+  color: var(--accent-color);
   z-index: 2;
-  color: #000;
   transition: color 0.5s ease-in-out;
 }
 

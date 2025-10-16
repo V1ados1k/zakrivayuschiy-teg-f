@@ -12,11 +12,11 @@
 
 @keyframes scale {
   from {
-    transform: 1;
+    scale: 1;
   }
 
   to {
-    transform: 1.25;
+    scale: 1.25;
   }
 }
 
@@ -25,7 +25,11 @@
     opacity: 0;
   }
 
-  to {
+  50% {
     opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }

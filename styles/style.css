@@ -64,7 +64,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 49px;
+  gap: 50px;
 }
 
 .card__list-item {
@@ -93,7 +93,7 @@
 .img {
   background-size: cover;
   width: 100%;
-  height: 100%;
+  display: block;
 }
 
 .span__html {
@@ -120,14 +120,13 @@
   display: grid;
   grid-template-columns: 24px 1fr 12px;
   width: var(--project-width);
-  border-block-start: 3px solid #000;
   border-inline: 2px solid #000;
 }
 
 .paragraph__container {
   line-height: 21px;
   grid-column: 2;
-  padding-block: 25px;
+  padding-block: 26px;
   inline-size: clamp(20.063rem, 30.516vw + 12.91rem, 40.375rem);
   font-size: 18px;
 }
@@ -201,13 +200,16 @@
 }
 
 .floppy {
-  margin-block-end: 4px;
+  margin-block-end: 2px;
   margin-inline-end: 12px;
-  margin-block-start: 4px;
+  margin-block-start: 8px;
   position: relative;
-  color: var(--accent-color);
+  mix-blend-mode: difference;
+  color: var(--primary-color);
   min-block-size: 21px;
   min-inline-size: 21px;
+  width: 29px;
+  height: 29px;
 }
 
 .dialog[open] {
@@ -292,9 +294,37 @@
   position: relative;
   background-color: var(--primary-color);
   transition: box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform-origin: left;
+  transition: translate 0.5s ease-in-out;
+  translate: -100%;
+}
+
+.button:hover:before {
+  translate: 0%;
+}
+
+.button span {
+  position: relative;
+  color: #000;
+  z-index: 2;
+  color: #000;
+  transition: color 0.5s ease-in-out;
+}
+
+.button:hover span {
+  color: var(--primary-color);
+}
+
+/* .button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -319,7 +349,7 @@
 
 .button:hover span {
   color: var(--primary-color);
-}
+} */
 
 .button:focus {
   outline: none;
@@ -413,7 +443,7 @@
 
 @media (width >= 376px) {
   .header {
-    margin-block-end: 96px;
+    margin-block-end: 98px;
   }
 
   .container__image {
@@ -427,8 +457,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 7px;
+    padding-top: 5px;
     gap: 10px;
+    margin-block-start: 50px;
   }
 
   .floppy {

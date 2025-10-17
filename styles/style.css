@@ -107,10 +107,10 @@
   z-index: 2;
 }
 
-@supports (text-stroke: 0.3px #fff) or (-webkit-text-stroke: 0.3px #fff) {
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
   .span__html {
-    -webkit-text-stroke: 0.3px #fff;
-    text-stroke: 0.3px #fff;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
     text-shadow: none;
   }
 }
@@ -182,7 +182,7 @@
 }
 
 .save__button {
-  margin-block-start: 48px;
+  margin-block-start: 50px;
   inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
   block-size: clamp(5.25rem, -2.723vw + 5.888rem, 3.438rem);
   margin-block-end: 100px;
@@ -199,21 +199,19 @@
 }
 
 .floppy {
-  margin-block-end: 2px;
-  margin-inline-end: 12px;
   margin-block-start: 8px;
   position: relative;
   mix-blend-mode: difference;
   color: var(--primary-color);
-  min-block-size: 21px;
-  min-inline-size: 21px;
-  width: 29px;
-  height: 29px;
+  margin-inline-end: 13px;
+  margin-block-end: 3px;
+  block-size: 28px;
+  inline-size: 28px;
 }
 
 .dialog[open] {
   inline-size: 341px;
-  block-size: 191px;
+  min-block-size: 191px;
   padding: 0px;
   position: fixed;
 }
@@ -224,7 +222,7 @@
 
 .dialog__content {
   display: flex;
-  margin-block-start: 27px;
+  margin-block-start: 29px;
   margin-inline-start: 35px;
 }
 
@@ -253,11 +251,9 @@
 }
 
 .floppy-icon {
-  inline-size: 100%;
-  block-size: 100%;
-  max-inline-size: 39px;
-  max-block-size: 39px;
   align-self: center;
+  block-size: 39px;
+  inline-size: 39px;
 }
 
 .contrast {
@@ -308,45 +304,21 @@
 
 .button:hover:before {
   translate: 0%;
-}
-
-.button span {
-  position: relative;
-  color: var(--accent-color);
-  z-index: 2;
-  transition: color 0.5s ease-in-out;
-}
-
-.button:hover span {
-  color: var(--primary-color);
-}
-
-/* .button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--accent-color);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.button:hover::before {
-  transform: translateX(0);
   background-color: var(--primary-color);
   mix-blend-mode: difference;
 }
 
 .button span {
   position: relative;
+  mix-blend-mode: difference;
   z-index: 2;
-  color: var(--accent-color);
+  color: var(--primary-color);
   transition: color 0.5s ease-in-out;
 }
 
 .button:hover span {
   color: var(--primary-color);
-} */
+}
 
 .button:focus {
   outline: none;
@@ -460,11 +432,11 @@
   }
 
   .floppy {
-    width: 21px;
-    height: 21px;
-    margin-right: 0px;
-    margin-left: 13px;
-    margin-bottom: 7px;
+    inline-size: 21px;
+    block-size: 21px;
+    margin-inline-end: 0px;
+    margin-inline-start: 13px;
+    margin-block-end: 11px;
   }
 
   .save__text {

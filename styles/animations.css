@@ -15,8 +15,12 @@
     scale: 1;
   }
 
-  to {
+  50% {
     scale: 1.25;
+  }
+
+  to {
+    scale: 1;
   }
 }
 

@@ -211,9 +211,12 @@
 
 .dialog[open] {
   inline-size: 341px;
-  min-block-size: 191px;
   padding: 0px;
   position: fixed;
+  margin-block-end: 266px;
+  background-color: transparent;
+  padding-bottom: 23px;
+  margin-bottom: 243px;
 }
 
 .dialog::backdrop {
@@ -445,6 +448,7 @@
 
   .dialog[open] {
     inline-size: 353px;
+    padding-block-end: 28px;
   }
 
   .dialog__content {

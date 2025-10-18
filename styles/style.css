@@ -93,6 +93,7 @@
   background-size: cover;
   width: 100%;
   display: block;
+  max-block-size: 696px;
 }
 
 .span__html {
